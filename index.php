@@ -1,11 +1,5 @@
 <?php
 
-// Pendiente:
-// revisar CSS.
-// ajax para actualizar automáticamente el contenido del div.
-// ver qué pasa con las conexiones mysql que abrimos.
-
-
 require_once ("config.inc.php");
 require_once ("functions.inc.php");
 
