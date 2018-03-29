@@ -20,22 +20,29 @@ echo '<!DOCTYPE html>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<!--<meta http-equiv="refresh" content="600" />-->
 			<title>' . $titlePage . '</title>';
-			?>
+?>
 			<script type="text/javascript">
 			//alterna el contenido de #booking-table
-			function loadtomorrow(){
-			$('#booking-table').load('index.php #tomorrow');
-			};
+
 			function loadtoday(){
-			$('#booking-table').load('index.php #today');
-			};
-			setInterval( "loadtomorrow()", 120000 );
-			setTimeout(setInterval("loadtoday()", 120000), 60000);
-			</script>
-			<?php
+				$('#booking-table').load('index.php #today');
+			}
+			function loadtomorrow(){
+				$('#booking-table').load('index.php #tomorrow');
+			}
+			function delaytomorrow(){
+				setTimeout("loadtomorrow()", 60000);
+			}
+			
+			setTimeout("loadtomorrow()", 60000);
+			setInterval("loadtoday()", 120000);
+			setInterval("delaytomorroww()", 120000);
+
+    			</script>
+<?php
+
 echo '</head>
 			<body>';
-
 echo '<div id="booking-table" class="clear">
 			<div id="today">';
 
