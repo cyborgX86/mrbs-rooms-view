@@ -1,7 +1,5 @@
 <?php
 
-// Pendiente: revisar CSS.
-
 $date   = date('Y-m-d');
 $time   = date('H:i');
 $tomorrow = strtotime ('+1 day', strtotime ($date)) ;
