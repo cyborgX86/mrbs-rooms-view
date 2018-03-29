@@ -22,22 +22,24 @@ echo '<!DOCTYPE html>
 			<title>' . $titlePage . '</title>';
 ?>
 			<script type="text/javascript">
-			//alterna el contenido de #booking-table
-
+			//alterna cada segundo el contenido de #booking-table
 			function loadtoday(){
 				$('#booking-table').load('index.php #today');
 			}
 			function loadtomorrow(){
 				$('#booking-table').load('index.php #tomorrow');
 			}
-			function delaytomorrow(){
-				setTimeout("loadtomorrow()", 60000);
-			}
+			var flag=false;
+			setInterval(function(){
+  				if(flag){
+    					loadtoday();
+    					flag=false;
+  				}else{
+    					loadtomorrow();
+    					flag=true;
+  				}
+			}, 60000);
 			
-			setTimeout("loadtomorrow()", 60000);
-			setInterval("loadtoday()", 120000);
-			setInterval("delaytomorroww()", 120000);
-
     			</script>
 <?php
 
