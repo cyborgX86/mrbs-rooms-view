@@ -2,9 +2,6 @@
 
 // Pendiente: revisar CSS.
 
-require_once ("config.inc.php");
-require_once ("functions.inc.php");
-
 $date   = date('Y-m-d');
 $time   = date('H:i');
 $tomorrow = strtotime ('+1 day', strtotime ($date)) ;
