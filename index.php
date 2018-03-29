@@ -32,7 +32,7 @@ echo '<!DOCTYPE html>
 			$('#booking-table').load('index.php #today');
 			};
 			setInterval( "loadtomorrow()", 120000 );
-			setInterval("loadtoday()", 180000);
+			setTimeout(setInterval("loadtoday()", 120000), 60000);
 			</script>
 			<?php
 echo '</head>
