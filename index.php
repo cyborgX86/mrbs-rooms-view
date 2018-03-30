@@ -25,12 +25,12 @@ echo '<!DOCTYPE html>
 			/*alterna el contenido de #booking-table (#today, #tomorrow)*/
 			//sin refresco de informaicón
 			function showToday(){
-				$('#hidden').hide();
+				$('#hide').hide();
 				$('#today').show();
 			}
 			function showTomorrow(){
 				$('#today').hide();
-				$('#hidden').show();
+				$('#hide').show();
 			}
 
 			var flag=false;
@@ -111,7 +111,7 @@ if (occupationState(qryState($date, $idroom_right)) == 1){
 				<a class="signup">Libre</a>';
 }
 echo '</div></div>
-			<div id="hidden" style="display:none;">
+			<div id="hide" style="display:none;">
 			<div id="tomorrow">';
 
 // Sala izquierda
