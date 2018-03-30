@@ -22,25 +22,53 @@ echo '<!DOCTYPE html>
 			<title>' . $titlePage . '</title>';
 ?>
 			<script type="text/javascript">
-			//alterna cada segundo el contenido de #booking-table
-			function loadtoday(){
-				$('#booking-table').load('index.php #today');
+			/*alterna el contenido de #booking-table (#today, #tomorrow)*/
+			//sin refresco de informaicón
+			function showToday(){
+				$('#hidden').hide();
+				$('#today').show();
 			}
-			function loadtomorrow(){
-				$('#booking-table').load('index.php #tomorrow');
+			function showTomorrow(){
+				$('#today').hide();
+				$('#hidden').show();
 			}
+
 			var flag=false;
 			setInterval(function(){
   				if(flag){
-    					loadtoday();
+    					showToday();
     					flag=false;
   				}else{
-    					loadtomorrow();
+    					showTomorrow();
     					flag=true;
   				}
 			}, 60000);
-			
-    			</script>
+			//con refresco de informaicón
+			/*function loadToday(){
+				$('#booking-table').load('index.php #today');
+			}
+			function loadTomorrow(){
+				$('#booking-table').load('index.php #tomorrow');
+			}
+			//método 1.
+			var flag=false;
+			setInterval(function(){
+  				if(flag){
+    					loadToday();
+    					flag=false;
+  				}else{
+    					loadTomorrow();
+    					flag=true;
+  				}
+			}, 60000);*/
+			//método 2.
+			/*function delaytomorrow(){
+				setTimeout("loadtomorrow()", 60000);
+			}
+			setTimeout("loadtomorrow()", 60000);
+			setInterval("loadtoday()", 120000);
+			setInterval("delaytomorroww()", 120000);*/
+			</script>
 <?php
 
 echo '</head>
