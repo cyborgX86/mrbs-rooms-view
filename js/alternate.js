@@ -33,7 +33,6 @@ function loadToday(){
 function loadTomorrow(){
   $('#booking-table').load('index.php #tomorrow');
 }
-
 var flag=false;
 setInterval(function(){
   if(flag){
@@ -94,5 +93,4 @@ setInterval(function(){
     flag=true;
   }
 }, 60000);
-
-/*
+*/
