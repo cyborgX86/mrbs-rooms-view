@@ -93,7 +93,7 @@ echo '<div class="room"><h3>' . getRoom($idroom_right);
 if (occupationState(qryState($tomorrow, $idroom_right)) == 1){
 	echo '<span class="tomorrow"><font color="#fe2e2e">Mañana</font></span></h3>
 				<a class="signupon">Actividades</a>';
-	pprintBooking(qryBooking($tomorrow, $idroom_right));
+	printBooking(qryBooking($tomorrow, $idroom_right));
 }else{
 	echo '<span class="tomorrow"><font color="#72ce3f">Mañana</font></span></h3>
 				<a class="signup">Libre</a>';
