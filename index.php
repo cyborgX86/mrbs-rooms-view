@@ -1,11 +1,5 @@
 <?php
 
-/*
-Pendiente:
-Revisar css.
-Función javascript Fade con refresco.
-*/
-
 require_once ("config.inc.php");
 require_once ("functions.php");
 
