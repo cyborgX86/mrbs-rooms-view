@@ -18,19 +18,19 @@ $connection=mysqli_connect($mysqlhost, $mysqluser, $mysqlpwd, $mysqldb);
 mysqli_select_db($connection, $mysqldb);
 
 echo '<!DOCTYPE html>
-			<html>
-			<head>
-			<meta charset="UTF-8">
-			<link rel="stylesheet" type="text/css" href="css/style.css" />
-			<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-			<script type="text/javascript" src="js/alternate.js"></script>
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<!--<meta http-equiv="refresh" content="600" />-->
-			<title>' . $titlePage . '</title>
-			</head>';
+      <html>
+      <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+      <script type="text/javascript" src="js/alternate.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--<meta http-equiv="refresh" content="600" />-->
+      <title>' . $titlePage . '</title>
+      </head>';
 echo '<body>
-			<div id="booking-table" class="clear">
-			<div id="today">';
+      <div id="booking-table" class="clear">
+      <div id="today">';
 
 // Sala izquierda
 echo '<div class="room"><h3>' . getRoom($idroom_left);
