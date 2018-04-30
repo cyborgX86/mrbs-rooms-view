@@ -1,7 +1,7 @@
 <?php
 
 require_once ("config.inc.php");
-require_once ("functions.php");
+require_once ("functions.inc.php");
 
 $date   = date('Y-m-d');
 $time   = date('H:i');
