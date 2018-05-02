@@ -6,7 +6,7 @@ function qryBooking($date, $idroom){
   global $connection;
   $sql = "SELECT name,description,from_unixtime(start_time),from_unixtime(end_time),status
             FROM mrbs_entry
-          WHERE from_unixtime(start_time)LIKE '%'$date'%' AND room_id = '$idroom'
+          WHERE from_unixtime(start_time)LIKE '%" . $date . "%' AND room_id = " . $idroom . "
             ORDER BY from_unixtime(start_time);";
   $qry = mysqli_query($connection, $sql);
   return $qry;
@@ -16,7 +16,7 @@ function qryBooking($date, $idroom){
 function getRoom($idroom){
 
   global $connection;
-  $sql = "SELECT room_name FROM mrbs_room WHERE id = '$idroom';";
+  $sql = "SELECT room_name FROM mrbs_room WHERE id = " . $idroom .";";
   $qry = mysqli_query($connection, $sql);
   $room = mysqli_fetch_array($qry);
   return utf8_encode($room[0]);
@@ -98,6 +98,6 @@ function printBooking($qry){
       }
     }
   }
-  echo '</ul>Información actualizada en tiempo real - Hora del sistema: ' . $time;
+  echo '</ul>Hora del sistema: ' . $time;
 }
 ?>
